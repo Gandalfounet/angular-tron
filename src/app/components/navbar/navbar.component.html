@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+          
+    </ul>
+    <ul class="navbar-nav mr-auto">
+     
+      <li class="nav-item">
+        <a class="nav-link" href="#">Wallet: <span *ngIf="!User.getUser()">Not Linked</span>
+        <span *ngIf="User.getUser()">{{User.getUser().address}}</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Balance: <span *ngIf="!User.getUser()">0</span>
+			<span *ngIf="User.getUser()">{{User.getUser().balance / 1000000}}</span>
+			<span>TRX</span></a>
+      </li>
+    </ul>
+  </div>
+</nav>
